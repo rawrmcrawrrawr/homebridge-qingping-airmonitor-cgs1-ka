@@ -15,10 +15,10 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/smallwood69/homebridge-cgllc-airmonitor-s1"
+		"url": "https://github.com/eric14142004/homebridge-qingping-airmonitor-cgs1-ka"
 	},
   "bugs": {
-    "url": "https://github.com/smallwood69/homebridge-cgllc-airmonitor-s1/issues"
+    "url": "https://github.com/eric14142004/homebridge-qingping-airmonitor-cgs1-ka"
   },
 	"engines": {
 		"node": ">=0.12.0",
