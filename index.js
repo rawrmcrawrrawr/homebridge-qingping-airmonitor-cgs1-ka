@@ -179,7 +179,7 @@ ClearGrassAirMonitor.prototype = {
 		    that.co2 = result['co2'];
 		    that.humidity = result['humidity'];
 		    that.pm25 = result['pm25'];
-		    that.tvoc = (result['tvoc'] * 4.5);
+		    that.tvoc = (result['tvoc'] * 4.56);
 		    that.temperature = result['temperature'];
 //            log.debug('result :  %s', JSON.stringify(result));
 //            log.debug('tvoc :  %s', that.tvoc);
