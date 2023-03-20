@@ -185,7 +185,7 @@ ClearGrassAirMonitor.prototype = {
 //            log.debug('tvoc :  %s', that.tvoc);
 		    
             that.pm2_5Characteristic.updateValue(that.pm25);
-	    if(that.tvoc)>1000{
+	    if(that.tvoc) > 1000{
 		    that.tvocCharacteristic.updateValue(1000);
 	    }
 		    else{
