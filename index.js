@@ -179,18 +179,18 @@ ClearGrassAirMonitor.prototype = {
 		    that.co2 = result['co2'];
 		    that.humidity = result['humidity'];
 		    that.pm25 = result['pm25'];
-		    if (result['tvoc'] * 4.56)>1000{
-			    that.tvoc = 1000;
-		    }
-		    else{
-		    	that.tvoc = (result['tvoc'] * 4.56);
-		    }
+		    that.tvoc = (result['tvoc'] * 4.56);
 		    that.temperature = result['temperature'];
 //            log.debug('result :  %s', JSON.stringify(result));
 //            log.debug('tvoc :  %s', that.tvoc);
 		    
             that.pm2_5Characteristic.updateValue(that.pm25);
-		    that.tvocCharacteristic.updateValue(that.tvoc);
+	    if(that.tvoc)>1000{
+		    that.tvocCharacteristic.updateValue(1000);
+	    }
+		    else{
+			that.tvocCharacteristic.updateValue(that.tvoc);
+		    }
             
             if(that.showTemperature){
 		      that.temperatureCharacteristic.updateValue(that.temperature);
